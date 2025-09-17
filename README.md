@@ -1,5 +1,15 @@
 ### 202030334 헌동렬
 
+
+# 09월 17일 수업내용
+### 브랜치 생성
+> git checkout -b <브랜치이름>
+
+> git switch -b <브랜치이름>
+
+> git branch <브랜치이름>
+# 09월 10일 수업내용
+
 # 09월 03일 수업내용
 ### ESLint
 1. strict
@@ -41,3 +51,4 @@
 - $ cd my-app
 - $ rm-rf node_modules package-lock.json
 - $ pnpm install
+
