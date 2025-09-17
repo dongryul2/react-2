@@ -5,10 +5,37 @@
 ### 브랜치 생성
 > git checkout -b <브랜치이름>
 
-> git switch -b <브랜치이름>
+> git switch -c <브랜치이름>
 
 > git branch <브랜치이름>
+
+### Create a Layout(레이아웃 만들기)
+1. layout은 여러 페이지에서 공유 되는 UI
+2. 네비게이션에서 state 및 상호작용 유지, 다시 렌더링 되지는 않음
+3. layout 파일에서 React 컴포넌트의 default export 사용하여 layout을 정의가능
+4. layouy 컴포넌트는 page 또는 다른 layout이 될 수 있는 children prop을 허용해야함
+
+### Creating a nested route(중첩 라우트 만들기)
+1. 중첩 라우트는 다중 URL 세그먼트로 구성된 라우트
+2. EX. 
+> (Root Segment)
+
+> blog (Segment)
+
+### [slug]
+- 사이트의 특정 페이지를 쉽게 읽을 수 있는 형태로 식별하는 url의 일부
+
+> 문서의 경로 /blog/[slug]의 slug는 불러올 데이터의 key 말함( 고로 데이터는 slug key가 반드시 있어야함)
+
+### Creating a dynamic segment(동적 세그먼트 만들기)
+- 동적 세그먼트 사용하면 데이터에서 생성된 경로르 만들 수 있음
+- 동적 세그먼트 생성 > 세그먼트 이름을 대괄호로 묶음
+
+### Rendering with search params(검색 매개변수 사용한 렌더링)
+
 # 09월 10일 수업내용
+
+<project Structure>
 
 # 09월 03일 수업내용
 ### ESLint
