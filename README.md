@@ -1,6 +1,75 @@
 ### 202030334 헌동렬
 
 
+# 09월 24일 수업내용
+### searchParmas
+- URL의 쿼리 문자열 읽는 방법
+
+```
+export default async function ProductsPage({
+    searchParams
+}: {
+    searchParams: Promise<{id?: string; name?: string}>
+}) {
+    const { id= "non-id", name= "non-name" } = await searchParams;
+    return (
+        <div>
+            <h1>Products page</h1>
+            <p>id: {id}</p>
+            <p>name: {name}</p>
+        </div>
+    )
+}
+```
+### Linking between pages(페이지간 연결)
+<Link> : html <a></a> 태그 학장해서 prefetching, client-side navigation 기능을 제공하는 next.js의 기본제공 컴포넌트
+
+```
+import Link from "next/link";
+import {posts} from "./posts"
+
+export default function BlogPage3() {
+    return(
+        <div>
+            <h1>블로그3 목록</h1>
+            <ul>
+                {posts.map((post) => (
+                    <li key={post.slug}>
+                        <Link href={`blog3/${post.slug}`}>{post.title}</Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+```
+
+### Route 방식 비교
+- pages router vs app router
+> pages router
+
+- > 초기부터 존재, 간단하고 익숙, 동적 라우트가 대표, 권장 x
+
+>app router
+
+- > next.js 13부터 도입,  더 유연하고 강력한 기능 지원, 레이아웃 중첩,병렬 라우트 대표, next.js 14부터 기본 권장 방식
+
+### 네비게이션 작동 방식
+- 서버렌더링
+- 프리페칭 : 미리 가져오기
+- 스트리밍
+- 클라이언트 측 전환
+
+### 서버 렌더링
+> next.js에서 레이아웃 페이지는 기본적으로 react 서버 컴포넌트.
+- 정적 렌더링
+- 동적 렌더링
+
+
+
+
+
+
 # 09월 17일 수업내용
 ### 브랜치 생성
 > git checkout -b <브랜치이름>
