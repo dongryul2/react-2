@@ -1,5 +1,47 @@
 ### 202030334 헌동렬
 
+# 10월 01일 수업내용
+### 실습 1
+- root page 간단히 작성
+- blog 디렉토리 만들고 간단한 page, 로딩 스켈톤 만들기
+- RootLayout에 link 컴포넌트를 이용해서 blog 네비게이션 만들기
+- blog page에 time delay 주기
+
+
+### 실습2
+- blog2 목록
+> 
+ ```
+export default function BlogPage2() {
+    return(
+        <div>
+            <h1>블로그 목록</h1>
+            <ul>
+                {posts.map((post) => {
+                    <li key={post.slug}>
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    </li>
+                })}
+            </ul>
+        </div>    
+    );
+} 
+```
+
+- 실습(동적 세그먼트 없는 generateStaticParams)
+> - 자주 변하지 않는 페이지는 generateStaticParams 사용 권장( 정적사이트처럼 빠름)
+> - 사용자 입력, db조회등 필요할땐 없이 런터임 처리하는게 좋음
+
+- 실습(generateStaticParams 사용하는경우)
+
+### generateStaticParams가 없는경우, 있는경우
+- 없는경우 : slug페이지에 접속하면 nextjs가 서버에서 요청 할 떄마다 해당 페이지를 동적으로 렌더링함, 빌드 결과물로 html 생성 x
+
+- 있는경우 : 지정한 slug에  대해서는 정적 html + json이 빌드 타임에 생성되어, 최초 접근시 ssr 필요없이 미리 만들어진 페이지 제공
+
+
+
+
 # 09월 24일 수업내용
 ### searchParmas
 - URL의 쿼리 문자열 읽는 방법
