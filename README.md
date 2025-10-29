@@ -1,5 +1,20 @@
 ### 202030334 한동렬
 
+# 10월 29일 수업내용
+> context provider 실습 실행과정
+1. createContext로 Context 객체 생성
+
+2. 이파일 내부에서 ThemeProvider 컴포넌트 정의
+
+- > 상태, 상태를 바꾸는 함수를 만든 뒤 Provider의 value로 내려줌( 상태는 Provider 내부에 보관 )
+
+### 외부(서브 파티)
+- client 전용 기능에 의존하는 외부 component를 사용하는 경우, 해당 component를 client component에 래핑해 예상대로 작동되는지 확인 가능 
+> ex_ `<Carousel />`은 acme-carousel 패키지에서 를 가져올 수 있음
+
+### use Hook 사용한 실습
+
+
 # 10월 22일 수업내용
 ### 인터리빙
 - 여러데이터 블럭, 비트를 섞어서 전송하거나 처리하여 오류 발생 시 영향 최소화하는 기술
