@@ -14,6 +14,25 @@
 
 ### use Hook 사용한 실습
 
+```
+import Posts from '@/ui/posts'
+import { Suspense } from 'react'
+
+export default functuon Page(){
+    // Don't await the date fetching function
+    // const posts = getPosts()
+    const posts = fetch("https://jsonplaceholder.typicode.com/posts')
+        .then((res) = > res.json())
+    
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <Posts posts={posts} />
+        </Suspense>
+    )
+}
+
+```
+
 
 # 10월 22일 수업내용
 ### 인터리빙
