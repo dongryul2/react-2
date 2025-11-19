@@ -1,5 +1,55 @@
 ### 202030334 한동렬
 
+# 11월 19일 수업내용
+
+### next js 응용 프로그램 스타일 지정방법
+1. Tailwind CSS [사용자 정의 디자인을 위한 유틸우선 프레임워크]
+2. CSS Module
+3. Global CSS [전역 css]
+- 전역 app 스타일은 디렉토리 내 모든 레이아웃, 페이지 or 컴포넌트로 가져올수 X
+4. External Stylesheets
+5. Sass (Guide)
+6. CSS-in-JS (Guide)
+
+```
+import styles from './blog.module.css'
+
+export default function BlogPage() {
+    return <main className={style.blog}>Blog Page</main>
+}
+```
+
+### Bootstrap 실습 
+1. /blog2/Blog2Com.tsx 컴포넌트 만들고 출력
+2. /blog2/components/Blog2Com2.tsx 컴포넌트 만들고 출력
+3. /components/Blog2RootCom.tsx 컴포넌트 만들고 출력
+4. blog3 페이지 만들고 만든 컴포넌트 추가
+5. /blog3/Blog3Com.tsx 컴포넌트 만들고 blog3 페이지에 삽입
+
+### 순서 지정, 병합 실습
+
+1. base-button.module.css, page.module.css 만들기
+2. 스타일 자유롭게, 구분 쉽게 background-color 정도만 다르게 선언
+3. blog4페이지랑 BaseButton 컴포넌트 문서에 나와있는 코드를 이용해 작성
+- blog 4 page
+ ```
+ import {BaseButton} from './BaseButton'
+ import styles from '/page.modue.css'
+
+ export default function Blog4Page(){
+    return(
+        <div>
+            <h1>Blog Post 4</h1>
+            <p>This id the content of blog post 4.</p>
+            <BaseButton className={styles.primary}>
+        </div>
+    )
+ }
+ ```
+
+# 11월 12일 수업내용
+- 병결로 인한 내용 미참
+
 # 11월 5일 수업내용
 
 ### use Hook 사용한 스트리밍 데이터
